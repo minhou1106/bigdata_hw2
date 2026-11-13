@@ -1,0 +1,22 @@
+{
+  "users": 4465,
+  "columns": [
+    "UserID",
+    "open_pr",
+    "open_issue",
+    "issue_comment",
+    "pr_review",
+    "pr_review_comment",
+    "push"
+  ],
+  "positive_predictions": {
+    "open_pr": 226,
+    "open_issue": 99,
+    "issue_comment": 126,
+    "pr_review": 153,
+    "pr_review_comment": 44,
+    "push": 3466
+  },
+  "future_score": null,
+  "warning": "Early forecast with fixed available data, not a last-minute snapshot. Long-horizon generalization remains uncertain."
+}

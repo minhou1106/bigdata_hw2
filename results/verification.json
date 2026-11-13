@@ -1,0 +1,9 @@
+{
+  "unit_tests": 6,
+  "controlled_binary_models": 36,
+  "max_reload_probability_error": 0.0,
+  "all_train_earlystop_calibration_chronology_checked": true,
+  "full34_matches_original_two_seeds": true,
+  "official_files_unchanged": true,
+  "public_package_no_private_paths_or_per_user_experiment_outputs": true
+}

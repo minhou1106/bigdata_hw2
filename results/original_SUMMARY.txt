@@ -1,0 +1,5 @@
+Historical backtest ONLY, not formal submission.
+         model  seed  observed_six_NOT_COMPLETE  five_activity_sensitivity  heuristic_coverage_score
+control4_push2    42                   0.295313                   0.384510                  0.384510
+control4_push2    43                   0.271116                   0.372629                  0.372629
+Two seeds on one week are not two independent weeks. Missingness masks are heuristic.

@@ -1,0 +1,124 @@
+{
+  "config": {
+    "observed_through": "2026-11-07T00:00:00Z",
+    "prediction_start": "2026-11-22T00:00:00+08:00",
+    "backtest_start": "2026-10-30T00:00:00+08:00",
+    "model": "control4",
+    "training_weeks_by_activity": {
+      "push": 2
+    },
+    "seeds": [
+      42,
+      43
+    ],
+    "threads": 4,
+    "iterations": 600,
+    "patience": 50,
+    "search_weeks": 26,
+    "coverage_ratio": 0.1,
+    "forecast_feature_time": "2026-11-07T08:00:00+08:00"
+  },
+  "mode": "early_forecast",
+  "target_start_utc": "2026-11-21 16:00:00",
+  "target_end_utc": "2026-11-28 16:00:00",
+  "feature_reference_utc": "2026-11-07 00:00:00",
+  "fit_cutoff_utc": "2026-11-06 20:00:00",
+  "lead": "14 days 16:00:00",
+  "schedule": [
+    {
+      "activity": "open_pr",
+      "train_label_starts": [
+        "2026-09-19 16:00:00",
+        "2026-09-26 16:00:00",
+        "2026-10-03 16:00:00",
+        "2026-10-10 16:00:00"
+      ],
+      "early_stop_label_start": "2026-10-17 16:00:00",
+      "calibration_label_start": "2026-10-24 16:00:00",
+      "fit_cutoff_utc": "2026-11-06 20:00:00"
+    },
+    {
+      "activity": "open_issue",
+      "train_label_starts": [
+        "2026-09-19 16:00:00",
+        "2026-09-26 16:00:00",
+        "2026-10-03 16:00:00",
+        "2026-10-10 16:00:00"
+      ],
+      "early_stop_label_start": "2026-10-17 16:00:00",
+      "calibration_label_start": "2026-10-24 16:00:00",
+      "fit_cutoff_utc": "2026-11-06 20:00:00"
+    },
+    {
+      "activity": "issue_comment",
+      "train_label_starts": [
+        "2026-09-19 16:00:00",
+        "2026-09-26 16:00:00",
+        "2026-10-03 16:00:00",
+        "2026-10-10 16:00:00"
+      ],
+      "early_stop_label_start": "2026-10-17 16:00:00",
+      "calibration_label_start": "2026-10-24 16:00:00",
+      "fit_cutoff_utc": "2026-11-06 20:00:00"
+    },
+    {
+      "activity": "pr_review",
+      "train_label_starts": [
+        "2026-09-19 16:00:00",
+        "2026-09-26 16:00:00",
+        "2026-10-03 16:00:00",
+        "2026-10-10 16:00:00"
+      ],
+      "early_stop_label_start": "2026-10-17 16:00:00",
+      "calibration_label_start": "2026-10-24 16:00:00",
+      "fit_cutoff_utc": "2026-11-06 20:00:00"
+    },
+    {
+      "activity": "pr_review_comment",
+      "train_label_starts": [
+        "2026-09-19 16:00:00",
+        "2026-09-26 16:00:00",
+        "2026-10-03 16:00:00",
+        "2026-10-10 16:00:00"
+      ],
+      "early_stop_label_start": "2026-10-17 16:00:00",
+      "calibration_label_start": "2026-10-24 16:00:00",
+      "fit_cutoff_utc": "2026-11-06 20:00:00"
+    },
+    {
+      "activity": "push",
+      "train_label_starts": [
+        "2026-09-05 16:00:00",
+        "2026-09-12 16:00:00"
+      ],
+      "early_stop_label_start": "2026-09-19 16:00:00",
+      "calibration_label_start": "2026-09-26 16:00:00",
+      "fit_cutoff_utc": "2026-11-06 20:00:00"
+    }
+  ],
+  "input_sha256": {
+    "IssueComments.parquet": "80ef195532a2602577ad16d400c602b82f6d6136d31c39487b2af75bcc8656f2",
+    "Issues.parquet": "612ad629e9caa4e0f670bc2a61267a756d589e2588e560534a1cd483400d44ad",
+    "PRReviewComments.parquet": "15848235d71e820580350a5bb6fc07c1875fd66e32e23750082169f36f58c1e8",
+    "PRReviews.parquet": "5d2c3c70a18bf5b88770b90f95e3f71ae0a34e3137b25d3064b662980f2f0e42",
+    "PullRequests.parquet": "bc056d3d9f8fb533dbd87402fec4cd81c2f3118c7988497b44a064ab537e6292",
+    "Pushes.parquet": "bbe1ea93e168ff0b6311c9e2feeab2e3fc412442de6aaf0e950751792b7ca94d",
+    "Repositories.parquet": "c728c4401d4e0f741a328025bd642d00121506f78138b344cdc7b98ce51073e6",
+    "Users.parquet": "9b2c6415cbdc0e5308f7641336a5bc57878cffd96d5c66e55326614100918585"
+  },
+  "official_sha256": {
+    "evaluator": "507be038c22320c375273228cea55b55e5421baa4fa84c3bbfeec583d79f202f",
+    "test_input": "c7081b886d73b4179d8c83df502bdc8d7348eef9fccda8073f1569e89cd597ed"
+  },
+  "code_sha256": {
+    "download_raw.py": "a3ab89f3235a6006703765244b05a1165e36429153f8ad4aa76115883818aff8",
+    "early_forecast.py": "dc7c92b0545f3ab09ab1180b1b71ebcc1f1ebebf7a29735d56ebcff2bc8f5256",
+    "model_core.py": "84030040eb0b16a89bb366bf5c933670a40f1b4bbd0929d2d4b345331f3a41c7",
+    "reproduce_study.py": "04c73743e4b8f405bb92a71621ce80df9509dfe73291804ef10ea3103f763bf5",
+    "run_revision.py": "88e9560a6d38411c704625f6a73d9bdd43b1056523b379a0f3cb94fcbfb1703a",
+    "test_checks.py": "b3225a5752cea538c1df93fb8e182d7b8944bd0d99411d07b750d506f7c803e0",
+    "verify_raw.py": "c991155b4e70f8274caa10be56bc9f019f6bf568340b7a7317258df3d27034d6"
+  },
+  "catboost": "1.2.10",
+  "xgboost": "3.2.0"
+}

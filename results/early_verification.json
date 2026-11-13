@@ -1,0 +1,11 @@
+{
+  "official_rows": 4465,
+  "official_order_matches": true,
+  "all_six_binary_columns_valid": true,
+  "reloaded_binary_models": 18,
+  "max_reload_error": 0.0,
+  "lead_matched_features_verified": true,
+  "train_earlystop_calibration_end_before_fit": true,
+  "future_score_available": false,
+  "unit_tests_passed": 10
+}

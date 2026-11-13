@@ -1,0 +1,23 @@
+{
+  "data_dir": "data",
+  "db_dir": "data/db",
+  "evaluator": "official/evaluate.py",
+  "test_input": "official/test_input.csv",
+  "observed_through": "2026-11-07T00:00:00Z",
+  "prediction_start": "2026-11-22T00:00:00+08:00",
+  "backtest_start": "2026-10-30T00:00:00+08:00",
+  "model": "control4",
+  "training_weeks_by_activity": {
+    "push": 2
+  },
+  "seeds": [
+    42,
+    43
+  ],
+  "threads": 4,
+  "iterations": 600,
+  "patience": 50,
+  "search_weeks": 26,
+  "coverage_ratio": 0.1,
+  "dependency_paths": []
+}

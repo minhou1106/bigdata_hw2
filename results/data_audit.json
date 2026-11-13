@@ -1,0 +1,508 @@
+{
+  "source_run": "20261107_111719_012823",
+  "tables": {
+    "IssueComments": {
+      "rows": 16113,
+      "row_time_column": "created_at",
+      "min_row_time": "2026-08-01 02:05:36",
+      "max_row_time": "2026-11-06 23:43:48"
+    },
+    "Issues": {
+      "rows": 28793,
+      "row_time_column": "first_seen_at",
+      "min_row_time": "2026-08-01 00:25:30",
+      "max_row_time": "2026-11-06 23:51:00"
+    },
+    "PRReviewComments": {
+      "rows": 10507,
+      "row_time_column": "created_at",
+      "min_row_time": "2026-08-01 14:45:06",
+      "max_row_time": "2026-11-06 22:33:40"
+    },
+    "PRReviews": {
+      "rows": 13228,
+      "row_time_column": "first_seen_at",
+      "min_row_time": "2026-08-01 00:08:00",
+      "max_row_time": "2026-11-06 23:44:56"
+    },
+    "PullRequests": {
+      "rows": 44335,
+      "row_time_column": "first_seen_at",
+      "min_row_time": "2026-08-01 00:08:00",
+      "max_row_time": "2026-11-06 23:59:10"
+    },
+    "Pushes": {
+      "rows": 129950,
+      "row_time_column": "created_at",
+      "min_row_time": "2026-08-01 00:00:36",
+      "max_row_time": "2026-11-06 09:17:14"
+    },
+    "Repositories": {
+      "rows": 25229,
+      "row_time_column": "first_seen_at",
+      "min_row_time": "2026-08-01 00:00:36",
+      "max_row_time": "2026-11-06 23:49:22"
+    },
+    "Users": {
+      "rows": 11135,
+      "row_time_column": "first_seen_at",
+      "min_row_time": "2026-08-01 00:00:36",
+      "max_row_time": "2026-11-06 23:49:22"
+    }
+  },
+  "official_users": 4465,
+  "hashes": {
+    "IssueComments.parquet": "80ef195532a2602577ad16d400c602b82f6d6136d31c39487b2af75bcc8656f2",
+    "Issues.parquet": "612ad629e9caa4e0f670bc2a61267a756d589e2588e560534a1cd483400d44ad",
+    "PRReviewComments.parquet": "15848235d71e820580350a5bb6fc07c1875fd66e32e23750082169f36f58c1e8",
+    "PRReviews.parquet": "5d2c3c70a18bf5b88770b90f95e3f71ae0a34e3137b25d3064b662980f2f0e42",
+    "PullRequests.parquet": "bc056d3d9f8fb533dbd87402fec4cd81c2f3118c7988497b44a064ab537e6292",
+    "Pushes.parquet": "bbe1ea93e168ff0b6311c9e2feeab2e3fc412442de6aaf0e950751792b7ca94d",
+    "Repositories.parquet": "c728c4401d4e0f741a328025bd642d00121506f78138b344cdc7b98ce51073e6",
+    "Users.parquet": "9b2c6415cbdc0e5308f7641336a5bc57878cffd96d5c66e55326614100918585",
+    "original_model_core.py": "d5319e0750221a2dc09440be002038ae8aee3d4169d629208601a4e4d33daffe",
+    "original_run_revision.py": "21da6dcb879e91831fb9c9cd4e4af77ff1a914c8706b8c364a333e0c7a9041ba"
+  },
+  "event_period_utc": [
+    "2026-08-01T00:00:00",
+    "2026-11-07T00:00:00"
+  ],
+  "cohort_users_observed": 5848,
+  "official_users_present": 4465,
+  "official_hashes": {
+    "cohort.txt": "19ce5c59dcf66472042ee78fc1dcb0c03267210f83d478ee09fe06b881c65201",
+    "evaluate.py": "507be038c22320c375273228cea55b55e5421baa4fa84c3bbfeec583d79f202f",
+    "preprocess.py": "624f13187c3268854edeea88b394951af5ed571b18690295af5114cd7c05d96b",
+    "README.md": "a84038d3b83757200f3fb7c570d465f91ae6c7fb85b609349e0273879f6416d6",
+    "SCHEMA.md": "d676e85fb73213d4297fd0d98e776613285d250189d39583fe24d5fda84937e3",
+    "test_input.csv": "c7081b886d73b4179d8c83df502bdc8d7348eef9fccda8073f1569e89cd597ed"
+  },
+  "original_results": [
+    {
+      "seed": 42,
+      "metrics": {
+        "observed_six_NOT_COMPLETE": {
+          "macro_f1": 0.3388983580215766,
+          "micro_f1": 0.25172711571675305,
+          "score": 0.2953127368691648,
+          "per_activity_f1": [
+            0.4116743471582181,
+            0.46859903381642515,
+            0.3254437869822485,
+            0.37587006960556846,
+            0.3111111111111111,
+            0.14069179945588806
+          ],
+          "tp": [
+            134,
+            97,
+            55,
+            81,
+            35,
+            181
+          ],
+          "fp": [
+            160,
+            124,
+            34,
+            66,
+            89,
+            2194
+          ],
+          "fn": [
+            223,
+            96,
+            194,
+            203,
+            66,
+            17
+          ]
+        },
+        "five_activity_sensitivity": {
+          "macro_f1": 0.37853966973471426,
+          "micro_f1": 0.3904808159300631,
+          "score": 0.38451024283238866,
+          "per_activity_f1": [
+            0.4116743471582181,
+            0.46859903381642515,
+            0.3254437869822485,
+            0.37587006960556846,
+            0.3111111111111111
+          ],
+          "tp": [
+            134,
+            97,
+            55,
+            81,
+            35
+          ],
+          "fp": [
+            160,
+            124,
+            34,
+            66,
+            89
+          ],
+          "fn": [
+            223,
+            96,
+            194,
+            203,
+            66
+          ]
+        },
+        "heuristic_coverage_score": {
+          "macro_f1": 0.37853966973471426,
+          "micro_f1": 0.3904808159300631,
+          "score": 0.38451024283238866,
+          "per_activity_f1": [
+            0.4116743471582181,
+            0.46859903381642515,
+            0.3254437869822485,
+            0.37587006960556846,
+            0.3111111111111111
+          ],
+          "tp": [
+            134,
+            97,
+            55,
+            81,
+            35
+          ],
+          "fp": [
+            160,
+            124,
+            34,
+            66,
+            89
+          ],
+          "fn": [
+            223,
+            96,
+            194,
+            203,
+            66
+          ]
+        },
+        "heuristic_usable_activities": [
+          "open_pr",
+          "open_issue",
+          "issue_comment",
+          "pr_review",
+          "pr_review_comment"
+        ],
+        "warning": "Heuristic coverage is not an official scoring mask or guarantee of complete truth."
+      },
+      "training": [
+        {
+          "activity": "open_pr",
+          "train": [
+            "2026-09-10 16:00:00",
+            "2026-09-17 16:00:00",
+            "2026-09-24 16:00:00",
+            "2026-10-01 16:00:00"
+          ],
+          "early_stop": "2026-10-08 16:00:00",
+          "calibration": "2026-10-15 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 4.065811965811966,
+          "reload_error": 0.0,
+          "training_rows": 11854,
+          "feature_count": 34
+        },
+        {
+          "activity": "open_issue",
+          "train": [
+            "2026-09-10 16:00:00",
+            "2026-09-17 16:00:00",
+            "2026-09-24 16:00:00",
+            "2026-10-01 16:00:00"
+          ],
+          "early_stop": "2026-10-08 16:00:00",
+          "calibration": "2026-10-15 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 8.740345110928512,
+          "reload_error": 0.0,
+          "training_rows": 11854,
+          "feature_count": 34
+        },
+        {
+          "activity": "issue_comment",
+          "train": [
+            "2026-09-10 16:00:00",
+            "2026-09-17 16:00:00",
+            "2026-09-24 16:00:00",
+            "2026-10-01 16:00:00"
+          ],
+          "early_stop": "2026-10-08 16:00:00",
+          "calibration": "2026-10-15 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 5.383414108777599,
+          "reload_error": 0.0,
+          "training_rows": 11854,
+          "feature_count": 34
+        },
+        {
+          "activity": "pr_review",
+          "train": [
+            "2026-09-10 16:00:00",
+            "2026-09-17 16:00:00",
+            "2026-09-24 16:00:00",
+            "2026-10-01 16:00:00"
+          ],
+          "early_stop": "2026-10-08 16:00:00",
+          "calibration": "2026-10-15 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 5.977045320776927,
+          "reload_error": 0.0,
+          "training_rows": 11854,
+          "feature_count": 34
+        },
+        {
+          "activity": "pr_review_comment",
+          "train": [
+            "2026-09-10 16:00:00",
+            "2026-09-17 16:00:00",
+            "2026-09-24 16:00:00",
+            "2026-10-01 16:00:00"
+          ],
+          "early_stop": "2026-10-08 16:00:00",
+          "calibration": "2026-10-15 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 8.606158833063208,
+          "reload_error": 0.0,
+          "training_rows": 11854,
+          "feature_count": 34
+        },
+        {
+          "activity": "push",
+          "train": [
+            "2026-08-20 16:00:00",
+            "2026-09-10 16:00:00"
+          ],
+          "early_stop": "2026-09-17 16:00:00",
+          "calibration": "2026-09-24 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 1.0,
+          "reload_error": 0.0,
+          "training_rows": 4101,
+          "feature_count": 34
+        }
+      ],
+      "users": 3913
+    },
+    {
+      "seed": 43,
+      "metrics": {
+        "observed_six_NOT_COMPLETE": {
+          "macro_f1": 0.3221180789190841,
+          "micro_f1": 0.22011460185734044,
+          "score": 0.2711163403882123,
+          "per_activity_f1": [
+            0.40472175379426645,
+            0.4668192219679634,
+            0.32515337423312884,
+            0.3558897243107769,
+            0.25925925925925924,
+            0.12086513994910941
+          ],
+          "tp": [
+            120,
+            102,
+            53,
+            71,
+            21,
+            190
+          ],
+          "fp": [
+            116,
+            142,
+            24,
+            44,
+            40,
+            2756
+          ],
+          "fn": [
+            237,
+            91,
+            196,
+            213,
+            80,
+            8
+          ]
+        },
+        "five_activity_sensitivity": {
+          "macro_f1": 0.36236866671307905,
+          "micro_f1": 0.3828899321857068,
+          "score": 0.37262929944939294,
+          "per_activity_f1": [
+            0.40472175379426645,
+            0.4668192219679634,
+            0.32515337423312884,
+            0.3558897243107769,
+            0.25925925925925924
+          ],
+          "tp": [
+            120,
+            102,
+            53,
+            71,
+            21
+          ],
+          "fp": [
+            116,
+            142,
+            24,
+            44,
+            40
+          ],
+          "fn": [
+            237,
+            91,
+            196,
+            213,
+            80
+          ]
+        },
+        "heuristic_coverage_score": {
+          "macro_f1": 0.36236866671307905,
+          "micro_f1": 0.3828899321857068,
+          "score": 0.37262929944939294,
+          "per_activity_f1": [
+            0.40472175379426645,
+            0.4668192219679634,
+            0.32515337423312884,
+            0.3558897243107769,
+            0.25925925925925924
+          ],
+          "tp": [
+            120,
+            102,
+            53,
+            71,
+            21
+          ],
+          "fp": [
+            116,
+            142,
+            24,
+            44,
+            40
+          ],
+          "fn": [
+            237,
+            91,
+            196,
+            213,
+            80
+          ]
+        },
+        "heuristic_usable_activities": [
+          "open_pr",
+          "open_issue",
+          "issue_comment",
+          "pr_review",
+          "pr_review_comment"
+        ],
+        "warning": "Heuristic coverage is not an official scoring mask or guarantee of complete truth."
+      },
+      "training": [
+        {
+          "activity": "open_pr",
+          "train": [
+            "2026-09-10 16:00:00",
+            "2026-09-17 16:00:00",
+            "2026-09-24 16:00:00",
+            "2026-10-01 16:00:00"
+          ],
+          "early_stop": "2026-10-08 16:00:00",
+          "calibration": "2026-10-15 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 4.065811965811966,
+          "reload_error": 0.0,
+          "training_rows": 11854,
+          "feature_count": 34
+        },
+        {
+          "activity": "open_issue",
+          "train": [
+            "2026-09-10 16:00:00",
+            "2026-09-17 16:00:00",
+            "2026-09-24 16:00:00",
+            "2026-10-01 16:00:00"
+          ],
+          "early_stop": "2026-10-08 16:00:00",
+          "calibration": "2026-10-15 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 8.740345110928512,
+          "reload_error": 0.0,
+          "training_rows": 11854,
+          "feature_count": 34
+        },
+        {
+          "activity": "issue_comment",
+          "train": [
+            "2026-09-10 16:00:00",
+            "2026-09-17 16:00:00",
+            "2026-09-24 16:00:00",
+            "2026-10-01 16:00:00"
+          ],
+          "early_stop": "2026-10-08 16:00:00",
+          "calibration": "2026-10-15 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 5.383414108777599,
+          "reload_error": 0.0,
+          "training_rows": 11854,
+          "feature_count": 34
+        },
+        {
+          "activity": "pr_review",
+          "train": [
+            "2026-09-10 16:00:00",
+            "2026-09-17 16:00:00",
+            "2026-09-24 16:00:00",
+            "2026-10-01 16:00:00"
+          ],
+          "early_stop": "2026-10-08 16:00:00",
+          "calibration": "2026-10-15 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 5.977045320776927,
+          "reload_error": 0.0,
+          "training_rows": 11854,
+          "feature_count": 34
+        },
+        {
+          "activity": "pr_review_comment",
+          "train": [
+            "2026-09-10 16:00:00",
+            "2026-09-17 16:00:00",
+            "2026-09-24 16:00:00",
+            "2026-10-01 16:00:00"
+          ],
+          "early_stop": "2026-10-08 16:00:00",
+          "calibration": "2026-10-15 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 8.606158833063208,
+          "reload_error": 0.0,
+          "training_rows": 11854,
+          "feature_count": 34
+        },
+        {
+          "activity": "push",
+          "train": [
+            "2026-08-20 16:00:00",
+            "2026-09-10 16:00:00"
+          ],
+          "early_stop": "2026-09-17 16:00:00",
+          "calibration": "2026-09-24 16:00:00",
+          "fit_asof": "2026-10-29 12:00:00",
+          "positive_weight": 1.0,
+          "reload_error": 0.0,
+          "training_rows": 4101,
+          "feature_count": 34
+        }
+      ],
+      "users": 3913
+    }
+  ]
+}
